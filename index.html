@@ -13,7 +13,7 @@
     <link rel="icon" type="image/x-icon" href="star.png" />
   </head>
   <body>
-    <nav>
+    <nav id="nav-bar">
       <h1>Labothlano</h1>
       <ul>
         <li>
@@ -271,7 +271,59 @@
     const partnerCarousel = document.getElementById("partner-carousel");
     const partners = partnerCarousel.getElementsByTagName("li");
     let currentIndex = 0;
+    const aboutSection = document.getElementById("about");
+    const homeSection = document.getElementById("home");
+    const partnerSection = document.getElementById("partners");
+    const nav = document.getElementById("nav-bar");
 
+    window.onresize = function () {
+      if (document.body.clientWidth < 800) {
+        //BOTTOM
+        if (homeSection.getBoundingClientRect().top <= 0) {
+          console.log("TRIGGER: bottom of div reached.");
+
+          nav.style.backgroundColor = "transparent";
+        }
+        //TOP
+        if (aboutSection.getBoundingClientRect().top <= 200) {
+          console.log("TRIGGER: top of div reached.");
+
+          nav.style.backgroundColor = "var(--officeblue)";
+        }
+
+        if (partnerSection.getBoundingClientRect().top <= 200) {
+          console.log("TRIGGER: top of div reached.");
+
+          nav.style.backgroundColor = "var(--deepblue)";
+        }
+      } else {
+        nav.style.backgroundColor = "var(--canvas)";
+      }
+    };
+    window.onscroll = function () {
+      if (document.body.clientWidth < 800) {
+        //BOTTOM
+        if (homeSection.getBoundingClientRect().top <= 0) {
+          console.log("TRIGGER: bottom of div reached.");
+
+          nav.style.backgroundColor = "transparent";
+        }
+        //TOP
+        if (aboutSection.getBoundingClientRect().top <= 200) {
+          console.log("TRIGGER: top of div reached.");
+
+          nav.style.backgroundColor = "var(--officeblue)";
+        }
+
+        if (partnerSection.getBoundingClientRect().top <= 200) {
+          console.log("TRIGGER: top of div reached.");
+
+          nav.style.backgroundColor = "var(--deepblue)";
+        }
+      } else {
+        nav.style.backgroundColor = "var(--canvas)";
+      }
+    };
     function showNextPartner() {
       console.log("Current partner index:", currentIndex);
       partners[currentIndex].classList.remove("active");

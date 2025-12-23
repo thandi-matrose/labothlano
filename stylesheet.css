@@ -2,8 +2,10 @@
   --header-font: "Unbounded", sans-serif;
   --body-font: "Manrope";
   --condensed-font: "Sofia Sans Condensed", sans-serif;
-  --skyblue: #648396;
-    --officeblue: #335e79;
+  
+    --officeblue: #346174;
+    --skyblue: var(--officeblue);
+  --deepblue: #065990;
   --mandarin: #f4af48;
   --orange:#F5C857;
   --sunray: #eae4b3;
@@ -52,6 +54,7 @@ body {
 
 .labothlano {
   font-family: var(--body-font);
+  letter-spacing: -4px;
 }
 
 body nav  {
@@ -64,11 +67,12 @@ body nav  {
   right: 0;
 
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 1fr 2fr;
   justify-items: left;
   align-items: center;
   background-color: var(--canvas);
   z-index: 10;
+  transition: background-color 0.2s ease-in-out;
  
 }
 
@@ -124,18 +128,25 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: scale 0.5s ease-in-out;
+  transition: border 0.5s ease-in-out;
+  transition: font-weight 0.5s ease-in-out;
 }
 
 button:hover {
-  background-color: var(--sunray);
+  background-color: var(--officeblue);
   scale: 1.05;
+  font-weight: 900;
   transition: scale 0.5s ease-in-out;
+transition: border 0.5s ease-in-out;
+
+  transition: font-weight 0.5s ease-in-out;
   
 }
 
 h1 {
   margin: 0;
   padding: 0;
+  letter-spacing: -3px;
 }
 
 h2 {
@@ -163,12 +174,12 @@ h3 {
   display: inline;
   margin: 0;
   padding: 0 5px;
-  font-size: 40px;
+  font-size: 55px;
   font-weight: 200;
   font-family: var(--condensed-font);
   text-transform: uppercase;
   letter-spacing: -2px;
-  line-height: 50px;
+  line-height: 65px;
   
 }
 
@@ -176,7 +187,7 @@ h3 {
 
 h4 {
   margin: 0;
-  padding: 0;
+  padding:10px;
   font-family: var(--header-font);
 }
 h5 {
@@ -290,6 +301,8 @@ footer {
   background-color: var(--deep-green);
   color: var(--canvas);
   padding: var(--bigger-pad);
+  padding-bottom: 70px;
+  padding-top: 70px;
 }
 footer div.footer-links {
   display: flex;
@@ -384,7 +397,7 @@ section#background-mission-vision div.container h3 {
   background-color: transparent;
   padding: 0px;
   margin: 0px;
-  line-height: 30px;
+  line-height: 45px;
 }
 section#background-mission-vision div.container h3 span {
   font-weight: 500;
@@ -580,3 +593,99 @@ section#contact div.container div.contact-grid form textarea:hover {
   
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 17px;
+  }
+  h1 {
+    display: none;
+    font-size: 50px;
+    font-weight: 700;
+    
+  }
+
+  h3 {
+    
+  }
+  body nav {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+    padding-top: 50px;
+    background-color: transparent;
+    color: var(--canvas);
+  }
+
+  body nav ul {
+    width: min-content;
+    gap: 10px;
+  }
+  body nav ul li a:hover {
+    background-color: transparent;
+
+  }
+  section.content-block div.container {
+    width: 80vw;
+  }
+  section#about {
+    height: 1000px;
+  }
+  section#about div.container {
+    gap: 50px;
+  }
+  section#about div.container .founder-card {
+    flex-direction: column;
+    border-radius: 0px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 171px 171px 0px 0px ;
+  }
+section#about div.container .founder-card img {
+    border-radius: 50%;
+
+    width: 300px;
+  }
+
+  section#about div.container .founder-card  p {
+    width: 300px;
+    margin-bottom: 0px;
+     margin-top: 0px;
+  } 
+
+    section#background-mission-vision {
+      
+    height: min-content
+    }
+  section#background-mission-vision div.container h3 {
+    font-size: 60px;
+    line-height: 50px;
+  }
+  section#background-mission-vision div.container {
+    grid-template-columns: 1fr;
+    gap:0px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  section#services div.container div.info-container {
+    flex-direction: column;
+    height: auto;
+  }
+    section#partners div.container{
+      flex-direction: column;
+    }
+    section#partners div.container div.logo-container{
+      grid-row: 1/2;
+    }
+    section#partners div.container a{
+      display: none;
+    }
+
+  section#partners div.container div.logo-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  section#contact div.container div.contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
