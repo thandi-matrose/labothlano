@@ -314,6 +314,8 @@ footer div.footer-links {
 }
 section#home {
   background-image: url(images/cloud.jpg);
+  background-size: cover;
+
   background-attachment: fixed;
   background-size: cover;
   

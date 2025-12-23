@@ -371,5 +371,18 @@
         leftArrow.style.display = "block";
       }
     }
+
+    var agentDetails = navigator.userAgent;
+    if (
+      /Android|Mobile|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        agentDetails
+      )
+    ) {
+      console.log("Mobile device detected");
+      document.body.style.fontWeight = "500";
+      document.body.style.fontSize = "25px";
+    } else {
+      console.log("Desktop device detected");
+    }
   </script>
 </html>
