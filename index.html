@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav id="nav-bar">
-      <h1>Labothlano</h1>
+      <h1 id="title">Labothlano</h1>
       <ul>
         <li>
           <a onclick="openSection('home', true)">Home</a>
@@ -273,6 +273,7 @@
     let currentIndex = 0;
     const aboutSection = document.getElementById("about");
     const homeSection = document.getElementById("home");
+    const serviceSection = document.getElementById("services");
     const partnerSection = document.getElementById("partners");
     const nav = document.getElementById("nav-bar");
     const sections = partnerCarousel.getElementsByTagName("section");
@@ -385,6 +386,8 @@
         element.style.height = "1200px";
       }
       nav.style.fontSize = "25px";
+      document.getElementById("title").style.fontSize = "30px";
+      serviceSection.style.height = "1600px";
       partnerSection.style.color = "var(--deep-green)";
     } else {
       console.log("Desktop device detected");

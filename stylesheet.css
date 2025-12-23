@@ -330,10 +330,6 @@ section#home div.container {
   gap: 20px;
   
 }
-section#about {
-  
-
-}
 section#about .founder-card {
 
   display: flex;
@@ -391,9 +387,7 @@ section#background-mission-vision div.container {
 section#background-mission-vision div.container p {
 margin-top: 5px;
 }
-section#background-mission-vision div.container div {
  
-}
 
 section#background-mission-vision div.container h3 {
   background-color: transparent;
@@ -570,9 +564,6 @@ section#contact div.container div.contact-grid {
   grid-template-columns: auto auto;
   gap: 25px;
 }
-section#contact div.container {
-  
-}
 section#contact div.container div.contact-grid form {
   align-self: left;
   text-align: left;
@@ -589,12 +580,6 @@ section#contact div.container div.contact-grid form textarea {
   box-sizing: border-box;
   border-radius: 15px;
 }
-
-section#contact div.container div.contact-grid form input:hover, 
-section#contact div.container div.contact-grid form textarea:hover {
-  
-}
-
 @media screen and (max-width: 800px) {
   body {
     font-size: 17px;
@@ -606,9 +591,6 @@ section#contact div.container div.contact-grid form textarea:hover {
     
   }
 
-  h3 {
-    
-  }
   body nav {
     grid-template-columns: 1fr;
     justify-items: center;
