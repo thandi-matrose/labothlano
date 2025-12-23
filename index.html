@@ -35,19 +35,22 @@
     </nav>
     <section id="home" class="content-block">
       <div class="container">
-        <h2>Welcome to <br /><span>Labothlano</span></h2>
+        <h2>Welcome to <br /><span class="labothlano">Labothlano</span></h2>
+        <button onclick="openSection('contact', false)">Get in Touch</button>
       </div>
     </section>
     <section id="about" class="content-block">
       <div class="container">
-        <div>
-          <p>
+        <div class="quote-container">
+          <p>❝</p>
+          <p class="quote">
             <span class="highlight">Labothlano</span> is a data consultancy and
             software development company specialising in data integration,
             automation, and cloud solutions. We help businesses harness the
             power of their data through innovative technologies and expert
             consulting services.
           </p>
+          <p>❞</p>
         </div>
         <div class="founder-card">
           <img src="images/founder.png" alt="Zwelinjani Matrose" />
@@ -60,7 +63,37 @@
         </div>
       </div>
     </section>
-
+    <section id="background-mission-vision" class="content-block">
+      <div class="container">
+        <div style="grid-row: span 2">
+          <h3>Our <br /><span>Background</span></h3>
+          <p>
+            Established in 2025, Labothlano was created to address the growing
+            need for enterprise grade data integration, automation, and
+            governance solutions in South Africa’s financial and telecom
+            sectors. As consultants and developers, we are passionate about
+            helping organisations unlock the full potential of their data
+            assets.
+          </p>
+        </div>
+        <div>
+          <h3>Our <br /><span>Mission</span></h3>
+          <p>
+            Our mission is to empower businesses to become
+            <span class="underline">data-driven</span> through innovative
+            solutions and expert consulting.
+          </p>
+        </div>
+        <div>
+          <h3>Our <br /><span>Vision</span></h3>
+          <p>
+            Our vision is to be a leading data consultancy and software
+            development company, recognised for transforming businesses through
+            data integration, automation, and cloud solutions.
+          </p>
+        </div>
+      </div>
+    </section>
     <section id="services" class="content-block">
       <div class="container">
         <h2>Our Services</h2>
@@ -71,9 +104,9 @@
             >proprietary data integration and automation platform </span
           >designed to help businesses unlock the full potential of their data.
         </p>
-        <div class="two-column">
-          <div>
-            <h3>Consulting Services</h3>
+        <div class="info-container">
+          <div id="consulting" class="active">
+            <h3 onclick="changeService('consulting')">Consulting Services</h3>
             <ul>
               <li>Data Engineering</li>
               <li>Enterprise Architecture</li>
@@ -84,10 +117,28 @@
               <li>Project & Programme Management</li>
             </ul>
           </div>
-
-          <div>
-            <h3>Labothlano Data Integration & Automation Platform</h3>
+          <a
+            id="left-arrow"
+            style="display: none"
+            onclick="changeService('consulting')"
+            ><img
+              src="images/icon/arrowleft.svg"
+              alt="Previous Partner"
+              onclick="showNextPartner"
+          /></a>
+          <a id="right-arrow" onclick="changeService('ldiap')"
+            ><img
+              src="images/icon/arrowright.svg"
+              alt="Previous Partner"
+              onclick="showNextPartner"
+          /></a>
+          <div id="ldiap" class="inactive">
             <h4>Our Proprietary Product</h4>
+            <h3 onclick="changeService('ldiap')">
+              Labothlano<br />
+              Data Integration <br />& Automation Platform
+            </h3>
+
             <div class="two-column">
               <h5>Core Features</h5>
               <ul>
@@ -122,32 +173,36 @@
           </p>
         </div>
 
-        <ul id="partner-carousel">
-          <li class="active">
-            <img src="images/partners/azure.png" alt="Microsoft Azure" />
-          </li>
-          <li>
-            <img src="images/partners/aws.png" alt="Amazon Web Services" />
-          </li>
-          <li>
-            <img src="images/partners/gcp.png" alt="Google Cloud Platform" />
-          </li>
-          <li><img src="images/partners/databricks.png" alt="Databricks" /></li>
-          <li><img src="images/partners/snowflake.png" alt="Snowflake" /></li>
-          <li><img src="images/partners/tableau.png" alt="Tableau" /></li>
-        </ul>
-        <a id="up-arrow" onclick="showPreviousPartner()"
-          ><img
-            src="images/icon/arrowup.svg"
-            alt="Previous Partner"
-            onclick="showNextPartner"
-        /></a>
-        <a id="down-arrow" onclick="showNextPartner()"
-          ><img
-            src="images/icon/arrowdown.svg"
-            alt="Next Partner"
-            onclick="showNextPartner"
-        /></a>
+        <div class="logo-container">
+          <a id="up-arrow" onclick="showPreviousPartner()"
+            ><img
+              src="images/icon/arrowup.svg"
+              alt="Previous Partner"
+              onclick="showNextPartner"
+          /></a>
+          <ul id="partner-carousel">
+            <li class="active">
+              <img src="images/partners/azure.png" alt="Microsoft Azure" />
+            </li>
+            <li>
+              <img src="images/partners/aws.png" alt="Amazon Web Services" />
+            </li>
+            <li>
+              <img src="images/partners/gcp.png" alt="Google Cloud Platform" />
+            </li>
+            <li>
+              <img src="images/partners/databricks.png" alt="Databricks" />
+            </li>
+            <li><img src="images/partners/snowflake.png" alt="Snowflake" /></li>
+            <li><img src="images/partners/tableau.png" alt="Tableau" /></li>
+          </ul>
+          <a id="down-arrow" onclick="showNextPartner()"
+            ><img
+              src="images/icon/arrowdown.svg"
+              alt="Next Partner"
+              onclick="showNextPartner"
+          /></a>
+        </div>
       </div>
     </section>
     <section id="contact" class="content-block">
@@ -185,14 +240,30 @@
       </div>
     </section>
     <footer>
-      <address>
-        Unit 4<br />Forber Court<br />16 Station Road<br />Mowbray<br />Cape
-        Town<br />7441<br />
-      </address>
-      <ul>
-        <li>info@labothlano.com</li>
-        <li>+27 21 123 4567</li>
-      </ul>
+      <div class="footer-links">
+        <ul>
+          <li>
+            <a onclick="openSection('home', true)">Home</a>
+          </li>
+          <li>
+            <a onclick="openSection('about', false)">About</a>
+          </li>
+          <li>
+            <a onclick="openSection('services', false)">Services</a>
+          </li>
+          <li>
+            <a onclick="openSection('partners', false)">Partners</a>
+          </li>
+          <li>
+            <a onclick="openSection('contact', false)">Contact</a>
+          </li>
+        </ul>
+
+        <address>
+          16 Station Road<br />Mowbray<br />Cape Town<br />7441<br />
+        </address>
+      </div>
+
       <quote> Labothlano (Pty) Ltd. All rights reserved. &copy; 2025</quote>
     </footer>
   </body>
@@ -224,6 +295,28 @@
         if (scrollToTop) {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
+      }
+    }
+
+    const consultingDiv = document.getElementById("consulting");
+    const ldiapDiv = document.getElementById("ldiap");
+    const leftArrow = document.getElementById("left-arrow");
+    const rightArrow = document.getElementById("right-arrow");
+    function changeService(serviceId) {
+      if (serviceId === "consulting") {
+        consultingDiv.classList.add("active");
+        consultingDiv.classList.remove("inactive");
+        ldiapDiv.classList.add("inactive");
+        ldiapDiv.classList.remove("active");
+        rightArrow.style.display = "block";
+        leftArrow.style.display = "none";
+      } else if (serviceId === "ldiap") {
+        ldiapDiv.classList.add("active");
+        ldiapDiv.classList.remove("inactive");
+        consultingDiv.classList.add("inactive");
+        consultingDiv.classList.remove("active");
+        rightArrow.style.display = "none";
+        leftArrow.style.display = "block";
       }
     }
   </script>
