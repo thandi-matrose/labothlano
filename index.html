@@ -275,7 +275,7 @@
     const homeSection = document.getElementById("home");
     const partnerSection = document.getElementById("partners");
     const nav = document.getElementById("nav-bar");
-
+    const sections = partnerCarousel.getElementsByTagName("section");
     window.onresize = function () {
       if (document.body.clientWidth < 800) {
         //BOTTOM
@@ -379,8 +379,12 @@
       )
     ) {
       console.log("Mobile device detected");
-      document.body.style.fontWeight = "500";
-      document.body.style.fontSize = "25px";
+      document.body.style.fontWeight = "600";
+      for (const i = 0; i < sections.length; i++) {
+        const element = sections[i];
+        element.style.height = "1200px";
+      }
+      partnerSection.style.color = "var(--deep-green)";
     } else {
       console.log("Desktop device detected");
     }
