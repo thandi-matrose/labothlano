@@ -1,0 +1,410 @@
+:root {
+  --header-font: "Unbounded", sans-serif;
+  --body-font: "Manrope";
+  --skyblue: #ABE0F0;
+  --mandarin: #E2852E;
+  --orange:#F5C857;
+  --sunray: #bbcd69;
+  --canvas: rgb(238, 249, 255);
+  --deep-green: #2b3a2c;
+  --gap: 20px;
+  --pad: 5px;
+  --bigger-pad: 25px;
+  --pace: 25s;
+  --projopacity: 0.5;
+  --backimage: url(images/plant3.jpg);
+  --isLight: false;
+}
+body {
+  background-color: var(--canvas);
+  
+
+
+  color: var(--deep-green);
+  font-family: var(--body-font), sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+
+  gap: 35px;
+  height: 100%;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+overflow-x: hidden;
+  font-size: 17px;
+  letter-spacing: -1px;
+  /*grid-template-columns: min-content auto;*/
+  /*background-image: var(--backimage);*/
+  gap: var(--gap);
+  transition: all 2s ease-in;
+
+
+ 
+}
+
+body nav  {
+  position: fixed;
+  top: 0;
+
+  width: calc(100vw - (40px));
+  padding: 10px 20px;
+  left: 0;
+  right: 0;
+
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  justify-items: left;
+  align-items: center;
+  background-color: var(--canvas);
+  z-index: 10;
+ 
+}
+
+body nav ul {
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: right;
+}
+
+a {
+
+}
+
+a:hover {
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+p {
+  text-align: justify;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.highlight {
+
+  background-color: var(--sunray);
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--header-font);
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--canvas);
+}
+
+h2 span {
+  font-weight: 700;
+  color: white;
+  
+}
+
+h3 {
+
+  color: var(--mandarin);
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: var(--header-font);
+  
+}
+
+
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--header-font);
+}
+
+section.content-block {
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+
+}
+
+
+section.content-block div.container {
+  width: 700px;
+  min-height: 100%;
+  padding: var(--pad);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap:10px;
+}
+
+
+
+/* 🔮 Animations */
+@keyframes project1 {
+  0% {
+    transform: scale(1);
+    opacity: var(--projopacity);
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes project2 {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: var(--projopacity);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes project3 {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: var(--projopacity);
+  }
+}
+
+@keyframes title {
+  25% {
+    color: var(--complementary);
+  }
+  50% {
+    background-color: var(--complementary);
+    color: var(--light);
+  }
+  75% {
+    background-color: transparent;
+    color: var(--complementary);
+  }
+  100% {
+    color: var(--light);
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  height: fit-content;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--deep-green);
+  color: var(--canvas);
+  padding: var(--bigger-pad);
+}
+
+section#home {
+  background-image: url(images/knitted.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  
+  align-items: end;
+  height: 100vh;
+}
+
+section#home div.container {
+  flex-direction: column;
+  justify-content: center;
+  
+  gap: 20px;
+  
+}
+section#about {
+  
+
+}
+section#about .founder-card {
+
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+section#about div.container {
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+section#about div.container .founder-card {
+  border: 1px solid var(--deep-green);
+  border-radius: 111px;
+  padding: 10px;
+}
+
+section#about div.container .founder-card {
+  padding-right: 30px;
+}
+
+section#about div.container .founder-card img {
+border-radius: 50%; 
+
+}
+section#services {
+   border-top: var(--deep-green) 1px dashed;
+   border-bottom: var(--deep-green) 1px dashed;
+
+}
+section#services div.container {
+ 
+flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+  padding: 20px;
+}
+
+section#services h2 {
+  color: var(--deep-green);
+ 
+}
+
+section#services ul.partner-carousel {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+
+section#partners {
+  background-color: var(--mandarin);
+}
+
+section#partners a img {
+  height: 50px;
+  width: 50px;
+}
+
+section#partners ul#partner-carousel {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height:200px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  transition: all 1s ease-in-out;
+}
+
+section#partners ul#partner-carousel li {
+  height: 0px;
+  opacity: 0;
+  transition: height opacity 2s ease-in-out;
+  display: flex;
+justify-content: center;
+  align-items: center;
+}
+
+
+
+section#partners ul#partner-carousel li.active {
+   
+  
+  width: auto;
+  height: 100%;
+  padding: 10px;
+  opacity: 1;
+   transition: height opacity 2s ease-in-out;
+}
+
+section#partners ul#partner-carousel li.active img {
+
+  width: auto;
+  width: 100%;
+   transition: height opacity 1s ease-in-out;
+}
+
+section#contact div.container {
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+section#contact div.container h2 {
+  color: var(--deep-green);
+}
+
+section#contact div.container div.contact-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+}
+
+section#contact div.container div.contact-grid form {
+  align-self: left;
+  text-align: left;
+
+}
+section#contact div.container div.contact-grid form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+
+

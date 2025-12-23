@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Labothlano</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&family=Unbounded:wght@200..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="star.png" />
+  </head>
+  <body>
+    <nav>
+      <h1>Labothlano</h1>
+      <ul>
+        <li>
+          <a onclick="openSection('home', true)">Home</a>
+        </li>
+        <li>
+          <a onclick="openSection('about', false)">About</a>
+        </li>
+        <li>
+          <a onclick="openSection('services', false)">Services</a>
+        </li>
+        <li>
+          <a onclick="openSection('partners', false)">Partners</a>
+        </li>
+        <li>
+          <a onclick="openSection('contact', false)">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="home" class="content-block">
+      <div class="container">
+        <h2>Welcome to <br /><span>Labothlano</span></h2>
+      </div>
+    </section>
+    <section id="about" class="content-block">
+      <div class="container">
+        <div>
+          <p>
+            <span class="highlight">Labothlano</span> is a data consultancy and
+            software development company specialising in data integration,
+            automation, and cloud solutions. We help businesses harness the
+            power of their data through innovative technologies and expert
+            consulting services.
+          </p>
+        </div>
+        <div class="founder-card">
+          <img src="images/founder.png" alt="Zwelinjani Matrose" />
+          <p>
+            Labothlano is founded by
+            <span class="underline">Zwelinjani Apostle Matrose</span>, a senior
+            ICT executive with 25+ years of experience across WesBank, Momentum,
+            Sasol, Vodacom, Cell C, and Old Mutual
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="content-block">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p>
+          At Labothlano, we offer a range of
+          <span class="underline">consulting services</span> and a
+          <span class="underline"
+            >proprietary data integration and automation platform </span
+          >designed to help businesses unlock the full potential of their data.
+        </p>
+        <div class="two-column">
+          <div>
+            <h3>Consulting Services</h3>
+            <ul>
+              <li>Data Engineering</li>
+              <li>Enterprise Architecture</li>
+              <li>Business Architecture</li>
+              <li>BI & Analytics</li>
+              <li>Cloud Migration</li>
+              <li>ICT Governance</li>
+              <li>Project & Programme Management</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Labothlano Data Integration & Automation Platform</h3>
+            <h4>Our Proprietary Product</h4>
+            <div class="two-column">
+              <h5>Core Features</h5>
+              <ul>
+                <li>Automated ingestion</li>
+                <li>Drag and drop pipeline builder</li>
+                <li>Data quality rules</li>
+                <li>Metadata & lineage</li>
+                <li>POPIA governance</li>
+                <li>Automated reporting</li>
+                <li>Multi cloud deployment</li>
+              </ul>
+              <h5>Deployment Options</h5>
+              <ul>
+                <li>Azure</li>
+                <li>AWS</li>
+                <li>GCP</li>
+                <li>Hybrid</li>
+                <li>On prem connectors</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="partners" class="content-block">
+      <div class="container">
+        <div>
+          <h2>Our Partners</h2>
+          <p>
+            We collaborate with leading technology providers to deliver
+            best-in-class solutions for our clients. Our partners include:
+          </p>
+        </div>
+
+        <ul id="partner-carousel">
+          <li class="active">
+            <img src="images/partners/azure.png" alt="Microsoft Azure" />
+          </li>
+          <li>
+            <img src="images/partners/aws.png" alt="Amazon Web Services" />
+          </li>
+          <li>
+            <img src="images/partners/gcp.png" alt="Google Cloud Platform" />
+          </li>
+          <li><img src="images/partners/databricks.png" alt="Databricks" /></li>
+          <li><img src="images/partners/snowflake.png" alt="Snowflake" /></li>
+          <li><img src="images/partners/tableau.png" alt="Tableau" /></li>
+        </ul>
+        <a id="up-arrow" onclick="showPreviousPartner()"
+          ><img
+            src="images/icon/arrowup.svg"
+            alt="Previous Partner"
+            onclick="showNextPartner"
+        /></a>
+        <a id="down-arrow" onclick="showNextPartner()"
+          ><img
+            src="images/icon/arrowdown.svg"
+            alt="Next Partner"
+            onclick="showNextPartner"
+        /></a>
+      </div>
+    </section>
+    <section id="contact" class="content-block">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+          <div>
+            <p>
+              We'd love to hear from you! Whether you're interested in our
+              consulting services or our data integration platform, feel free to
+              reach out.
+            </p>
+            <p>
+              Ready to transform your data into a strategic asset? Contact
+              Labothlano today to learn more about our services and how we can
+              help your business succeed.
+            </p>
+            <ul>
+              <li>Email: info@labothlano.com</li>
+              <li>Phone: +27 21 123 4567</li>
+            </ul>
+          </div>
+
+          <form action="mailto:info@labothlano.com">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="4" required></textarea
+            ><br />
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <address>
+        Unit 4<br />Forber Court<br />16 Station Road<br />Mowbray<br />Cape
+        Town<br />7441<br />
+      </address>
+      <ul>
+        <li>info@labothlano.com</li>
+        <li>+27 21 123 4567</li>
+      </ul>
+      <quote> Labothlano (Pty) Ltd. All rights reserved. &copy; 2025</quote>
+    </footer>
+  </body>
+  <script>
+    const partnerCarousel = document.getElementById("partner-carousel");
+    const partners = partnerCarousel.getElementsByTagName("li");
+    let currentIndex = 0;
+
+    function showNextPartner() {
+      console.log("Current partner index:", currentIndex);
+      partners[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % partners.length;
+      partners[currentIndex].classList.add("active");
+      console.log("Showing partner index:", currentIndex);
+    }
+
+    function showPreviousPartner() {
+      console.log("Current partner index:", currentIndex);
+      partners[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + partners.length - 1) % partners.length;
+      partners[currentIndex].classList.add("active");
+      console.log("Showing partner index:", currentIndex);
+    }
+
+    function openSection(sectionId, scrollToTop = false) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        if (scrollToTop) {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+    }
+  </script>
+</html>
