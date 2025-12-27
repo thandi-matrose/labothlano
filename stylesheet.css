@@ -18,12 +18,19 @@
   --projopacity: 0.5;
   --backimage: url(images/plant3.jpg);
   --isLight: false;
+
+  /*ADJUSTABLE MEASUREMENTS*/
+  --nav-font-size: var(--font-size);
+--font-weight: 300;
+  --font-size: 18px;
+  --section-height: 800px;
+  --service-section-height: 1000px;
+  --heading1-size: 60px;
+  --service-para-align: justify;
+  --partner-font-color: var(--canvas);
 }
 body {
   background-color: var(--canvas);
-  
-
-
   color: var(--deep-green);
   font-family: var(--body-font), sans-serif;
   font-optical-sizing: auto;
@@ -41,8 +48,9 @@ body {
   justify-items: center;
   justify-content: center;
 
-  font-size: 18px;
+  font-size: var(--font-size);
   letter-spacing: 0px;
+  font-weight: var(--font-weight);
   /*grid-template-columns: min-content auto;*/
   /*background-image: var(--backimage);*/
   gap: var(--gap);
@@ -73,6 +81,7 @@ body nav  {
   background-color: var(--canvas);
   z-index: 10;
   transition: background-color 0.2s ease-in-out;
+  font-size: var(--nav-font-size);
  
 }
 
@@ -147,6 +156,7 @@ h1 {
   margin: 0;
   padding: 0;
   letter-spacing: -3px;
+  font-size: var(--heading1-size);
 }
 
 h2 {
@@ -202,7 +212,7 @@ section.content-block {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 750px;
+  min-height: var(--section-height);
 
 }
 
@@ -401,7 +411,8 @@ section#background-mission-vision div.container h3 span {
 section#services {
    border-top: var(--deep-green) 1px dashed;
    border-bottom: var(--deep-green) 1px dashed;
-
+  height: var(--service-section-height);
+  text-align: var(--service-para-align);
 }
 section#services div.container {
  
@@ -486,7 +497,7 @@ section#partners {
   background-size: cover;
   justify-content: center;
   transition: height 1s ease-in-out;
-  color: var(--canvas);
+  color: var(--partner-font-color)
 }
 
 section#partners a img {

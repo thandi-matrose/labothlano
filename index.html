@@ -380,16 +380,20 @@
       )
     ) {
       console.log("Mobile device detected");
-      document.body.style.fontWeight = "600";
-      for (const i = 0; i < sections.length; i++) {
-        const element = sections[i];
-        element.style.height = "1200px";
-      }
-      nav.style.fontSize = "25px";
-      document.getElementById("title").style.fontSize = "30px";
-      serviceSection.style.height = "1600px";
-      serviceSection.style.justifyContent = "center";
-      partnerSection.style.color = "var(--deep-green)";
+      document.documentElement.style.setProperty("--font-weight", "600");
+      document.documentElement.style.setProperty("--section-height", "1200px");
+
+      document.documentElement.style.setProperty("--nav-font-size", "25px");
+      document.documentElement.style.setProperty("--heading1-size", "30px");
+      document.documentElement.style.setProperty("--section-height", "1600px");
+      document.documentElement.style.setProperty(
+        "--service-para-align",
+        "center"
+      );
+      document.documentElement.style.setProperty(
+        "--partner-font-color",
+        "var(--deep-green)"
+      );
     } else {
       console.log("Desktop device detected");
     }
